@@ -262,7 +262,6 @@ export class BsModalComponent implements OnInit, AfterViewInit, OnChanges, OnDes
     }
 
     private wireUpEventEmitters() {
-
         this.wireUpEventEmitter(this.onShow, this.onShowEvent$);
         this.wireUpEventEmitter(this.onOpen, this.onShown$);
         this.wireUpEventEmitter(this.onHide, this.onHide$);
@@ -271,8 +270,6 @@ export class BsModalComponent implements OnInit, AfterViewInit, OnChanges, OnDes
     }
 
     private wireUpEventEmitter<T>(emitter: EventEmitter<T>, stream$: Observable<T>) {
-        if (emitter.observers.length === 0) return;
-
         const sub = stream$.subscribe((next) => {
             this.zone.run(() => {
                 emitter.next(next);
