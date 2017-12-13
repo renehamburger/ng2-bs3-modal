@@ -44,15 +44,4 @@ testem.log
 Thumbs.db
 
 # Generated output
-/bundles/
-/modal/
-/autofocus/
-/utils/
-/ng2-bs3-modal.*
-src/**/*.js
-src/**/*.js.map
-src/**.*.d.ts
-**/*.ngfactory.ts
-**/*.ngsummary.json
-.idea/
-*.tgz
+

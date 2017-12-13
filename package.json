@@ -43,15 +43,15 @@
         "lint": "ng lint",
         "e2e": "ng e2e",
         "gh-pages": "ng build --app 'gh-pages' --prod --base-href '/ng2-bs3-modal/demo/' && angular-cli-ghpages",
-        "prepack": "yarn run build && yarn run bundles",
+        "prepack": "npm run build && npm run bundles",
         "clean": "rimraf bundles modal autofocus utils **/*.ngfactory.ts **/*.ngsummary.json src/**/*.js src/**/*.js.map ng2-bs3-modal.* ",
         "tsc:system": "tsc -p tsconfig.system.json",
         "tsc:umd": "ngc -p tsconfig.umd.json",
         "uglify:system": "uglifyjs ./bundles/ng2-bs3-modal.system.js --output ./bundles/ng2-bs3-modal.system.min.js",
         "uglify:umd": "uglifyjs ./bundles/ng2-bs3-modal.umd.js --output ./bundles/ng2-bs3-modal.umd.min.js",
-        "build:umd": "yarn run tsc:umd && rollup -c rollup.config.js && yarn run uglify:umd",
-        "build:system": "yarn run tsc:system && yarn run uglify:system",
-        "bundles": "yarn run clean && yarn run lint && yarn run build:system && yarn run build:umd"
+        "build:umd": "npm run tsc:umd && rollup -c rollup.config.js && npm run uglify:umd",
+        "build:system": "npm run tsc:system && npm run uglify:system",
+        "bundles": "npm run clean && npm run build:system && npm run build:umd"
     },
     "devDependencies": {
         "@angular/cli": "^1.4.3",
