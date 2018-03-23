@@ -43,7 +43,7 @@
         "lint": "ng lint",
         "e2e": "ng e2e",
         "gh-pages": "ng build --app 'gh-pages' --prod --base-href '/ng2-bs3-modal/demo/' && angular-cli-ghpages",
-        "prepack": "npm run build && npm run bundles",
+        "_prepack": "npm run build && npm run bundles",
         "clean": "rimraf bundles modal autofocus utils **/*.ngfactory.ts **/*.ngsummary.json src/**/*.js src/**/*.js.map ng2-bs3-modal.* ",
         "tsc:system": "tsc -p tsconfig.system.json",
         "tsc:umd": "ngc -p tsconfig.umd.json",
